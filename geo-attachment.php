@@ -119,10 +119,16 @@ class GeoAttachment {
 			}
 
 			$file = $atts['file'];
-			if ( $file ) {
+			$date = get_the_date( 'Y/m/d' );
+			if ( $file and $date ) {
 
-				$upload_dir = wp_upload_dir();
-				$file = trailingslashit( $upload_dir['path'] ) . $file;
+				// Find the attachment file in uploads
+				$upload_dir = wp_upload_dir( $date );
+				$file = path_join( $upload_dir['path'], $atts['file'] );
+				if ( ! is_readable( $file ) ) {
+					$upload_dir = wp_upload_dir();
+					$file = path_join( $upload_dir['path'], $atts['file'] );
+				}
 
 				if ( stripos( $file, '.kml' ) == strlen( $file ) - 4 ) {
 
