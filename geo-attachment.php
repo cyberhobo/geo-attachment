@@ -528,6 +528,10 @@ class GeoAttachmentKmlWriter {
     <name>$kml_path</name>
 <!-- Normal track style -->
     <Style id="track_n">
+		<LineStyle>
+			<color>7d0000ff</color>
+			<width>1.5</width>
+		</LineStyle>
       <IconStyle>
         <Icon>
           <href>http://earth.google.com/images/kml-icons/track-directional/track-none.png</href>
