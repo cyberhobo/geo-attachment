@@ -2,7 +2,7 @@
 Plugin Name: Geo Attachment
 Plugin URI: 
 Description: Transform an uploaded GPX file to KML with stats.
-Version: 0.1
+Version: 0.2
 Author: Dylan Kuhn
 Author URI: http://www.cyberhobo.net/
 Minimum WordPress Version Required: 2.6
